@@ -27,37 +27,19 @@ public class ArrayThreeSum {
         // You should remove these loops later!
         System.out.println("Checking all the combinations with overlapping allowed...");
         int sum = 1;
-        int x_index = 0;
-
-
         for(int x : input) {
-
-            int y_index = 0;
-
+            System.out.print("num 1 =" + x + "\n");
             for (int y : input) {
-
-                int z_index = 0;
-
+                System.out.print("num 2 =" + y + "\n");
                 for (int z : input) {
-                    if (x_index==y_index || y_index==z_index || x_index==z_index){
-                    System.out.println("overlapped");
-                } else {
-                        System.out.print("num 1 =" + x + "\n");
-                        System.out.print("num 2 =" + y + "\n");
-                        System.out.print("num 3 =" + z + "\n");
-                        sum = x + y + z;
-                        System.out.println("sum = " + sum + "\n");
-                        if (sum == 0) {
+                    System.out.print("num 3 =" + z + "\n");
+                    sum = x + y + z;
+                    System.out.println("sum = " + sum + "\n");
+                    if (sum == 0) {
                         return TRUE;
-                        }
-
                     }
-                    z_index++;
                 }
-
-                    y_index++;
             }
-            x_index++;
         }
 
 
